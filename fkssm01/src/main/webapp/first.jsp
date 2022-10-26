@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-  <h1>hello my first jsp</h1>
+  <h1>hello my first jsp.</h1>
 </body>
 </html>
