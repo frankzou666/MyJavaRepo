@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- default指定默认的数据库环境为mysql（该名字任意） -->
+	
+	<settings>
+	    <setting name="lazyLoadingEnabled" value="True" />
+	</settings>
+	<environments default="mysql">
+		<!-- 配置名为mysql的环境 -->
+		<environment id="mysql">
+			<!-- 配置事务管理类型，JDBC代表使用了JDBC自带的事务提交和回滚 -->
+			<transactionManager type="JDBC"/>
+			<!-- dataSource配置数据源，此处使用MySQL内置的数据源 -->
+			<dataSource type="POOLED">
+				<!-- 配置连接数据库的driver、url、用户名、密码 -->
+				<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql://192.168.1.41:3307/app?serverTimezone=UTC"/>
+				<property name="username" value="app"/>
+				<property name="password" value="app123456"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+	   <mapper resource="NewsMapper.xml"/>
+	</mappers> 
+</configuration>

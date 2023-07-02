@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- MyBatis Mapper文件的DTD -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ffssm02.NewsMapper">
+
+	<!-- 用insert元素定义一条insert SQL语句，id指定了这条语句的名称 -->
+	<insert id="saveNews">
+		insert into news_inf values(null, #{news_title}, #{news_content})
+	</insert>
+	<!-- 用update元素定义一条update SQL语句，id指定了这条语句的名称 -->
+	<update id="updateNews">
+		update news_inf set news_title=#{title}, news_content=#{content}
+		where news_id=#{id}
+	</update>
+	
+	<select id="selectAllNews" resultType="map">
+		select * from news_inf
+	</select>
+	<select id="selectOneNews" resultType="ffssm02.News" useCache="true">
+		select * from news_inf where news_id=#{id}
+	</select>
+
+
+
+</mapper>
