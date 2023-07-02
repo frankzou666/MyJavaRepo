@@ -12,10 +12,10 @@ public class PwdToolsApplication {
 	public String jaspytpassword = "dGlnZXIyMDIx";
 	
 	//the string we want to encrypt
-	public String textstring = "Bj4QDzb6atQ39VOhpl7z";
+	public String textstring = "mCpyTBdv1eqwKcHXWrRe";
 	
 	//the string we want to dencrypt
-	public String pwdstring ="";
+	public String pwdstring ="UlNkAxi4ocf7+1U2Hm0mmeohk59j054m";
 	public static void main(String[] args) {
 		PwdToolsApplication pwdToolsApplication = new PwdToolsApplication();
 		pwdToolsApplication.runPwd();

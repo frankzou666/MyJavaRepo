@@ -15,7 +15,6 @@ public class Ch0704 {
 		System.out.println(runtime.availableProcessors());
 		System.out.println(runtime.freeMemory());
 		Process process = runtime.exec("ls");
-		System.out.println(new OutputStream(process.getOutputStream()));
 	}
 
 }
