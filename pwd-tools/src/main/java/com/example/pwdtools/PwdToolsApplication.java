@@ -12,7 +12,7 @@ public class PwdToolsApplication {
 	public String jaspytpassword = "dGlnZXIyMDIx";
 	
 	//the string we want to encrypt
-	public String textstring = "mCpyTBdv1eqwKcHXWrRe";
+	public String textstring = "mCp1eqwKcRe";
 	
 	//the string we want to dencrypt
 	public String pwdstring ="UlNkAxi4ocf7+1U2Hm0mmeohk59j054m";
