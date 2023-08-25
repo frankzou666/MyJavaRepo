@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<!-- Read CSS -->
+
+<link rel="stylesheet" th:href ="@{/webjars/bootstrap/css/bootstrap.min.css}">
+
+<link rel="stylesheet" th:href="@{/css/user/signup.css}">
+
+<!-- Read JS -->
+
+<script th:src="@{/webjars/jquery/jquery.min.js}" defer></script>
+
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>
+
+<title th:text="#{user.signup.title}"></title>
+</head>
+<body class="bg-light">
+	<div class=""> 	
+		 <form id="signup-form" method="post" action="/user/signup" class="form-signup" th:object="${signupForm}">
+		 <h2 class="text-center" th:text="#{user.signup.title}" ></h2>
+		 <!-- splite by form-group userid-->
+		 
+		 <div class="form-group">
+		   <label for="userId" th:text="#{userId}"></label>
+		   <!-- what does form-control -->
+		   <input type="text" class="form-control" th:field="*{userId}" th:errorclass="is-invalid" />
+		   <div class="invalid-feedback" th:errors="*{userId}"></div>
+		 </div>
+		 
+		 <!-- splite by form-group password -->
+		 <div class="form-group">
+		   <label for="password" th:text="#{password}"></label>
+		   <!-- what does form-control -->
+		   <input type="text" class="form-control" th:field="*{password}" th:errorclass="is-invalid" >
+		   <div class="invalid-feedback" th:errors="*{password}"></div>
+		 </div>
+		 
+		 <!-- splite by form-group username -->
+		 <div class="form-group">
+		   <label for="userName"  th:text="#{userName}"></label>
+		   <!-- what does form-control -->
+		   <input type="text" class="form-control" th:field="*{userName}"  th:errorclass="is-invalid" >
+		   <div class="invalid-feedback" th:errors="*{userName}"></div>
+		 </div>
+		 
+		 
+		 <!-- splite by form-group birthday -->
+		 <div class="form-group">
+		   <label for="birthday" th:text="#{birthday}"></label>
+		   <!-- what does form-control -->
+		   <input type="text" class="form-control" th:field="*{birthday}" th:errorclass="is-invalid" >
+		   <div class="invalid-feedback" th:errors="*{birthday}"></div>
+		 </div>
+		 
+		 <!-- splite by form-group age -->
+		 <div class="form-group">
+		   <label for="age" th:text="#{age}"></label>
+		   <!-- what does form-control -->
+		   <input type="text" class="form-control" th:field="*{age}" th:errorclass="is-invalid" >
+		   <div class="invalid-feedback" th:errors="*{age}"></div>
+		 </div>
+		 
+		 <!-- splite by form-group gender -->
+		 <div class="form-group">
+		   <div th:each="item:${genderMap}" class="form-check-inline">
+		      <input type="radio" class ="form-check-input" th:value="${item.value}" th:field="*{gender}"/>
+              <label class="form-check-label" th:text="${item.key}"></label>
+          </div>
+         </div>
+ 
+		 
+		 
+		 <input type="submit" th:value="#{user.signup.btn}" class="btn btn-primary w-100 mt-3">
+		 </form>	
+	</div>
+	
+</body>
+</html>

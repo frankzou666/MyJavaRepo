@@ -5,4 +5,5 @@
  * 
  */
 module atgg {
+	requires junit;
 }
