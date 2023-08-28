@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -32,7 +33,7 @@ public class SignupController {
 	//@ModelAttribute --spring mvc will population the value to this form
 	public String getSignup(Model model,Locale locale,@ModelAttribute SignupForm form) {
 		// the get method , get "local" from browser
-		log.info("you access the controller :" + this.getClass().getName());
+		//log.info("you access the controller :" + this.getClass().getName());
 		Map<String,Integer> genderMap = userApplicationService.getGenderMap(locale);
 		model.addAttribute("genderMap",genderMap);
 		return "user/signup";
@@ -42,7 +43,7 @@ public class SignupController {
 	// add the BindingResult
 	
 	@PostMapping("/signup")
-	public String postSignup(Model model,Locale locale,@ModelAttribute SignupForm form,BindingResult bindingResult) {
+	public String postSignup(Model model,Locale locale,@ModelAttribute @Validated SignupForm form,BindingResult bindingResult) {
 		
 		// determation the input validate has error,to getSignup again
 		if (bindingResult.hasErrors()) {
