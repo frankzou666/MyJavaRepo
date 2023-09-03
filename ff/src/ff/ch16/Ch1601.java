@@ -26,7 +26,8 @@ class FirstRunable  implements Runnable{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.print('\n'+" hello world "+Thread.currentThread().getName()+':'+i);
+			System.out.println(" priority: "+Thread.currentThread().getPriority());
+			System.out.print('\n'+Thread.currentThread().getName()+':'+i);
 		}
 	}
 	
@@ -47,7 +48,7 @@ public class Ch1601{
 		 FirstRunable fr=new FirstRunable(); 
 		 new Thread(fr).start();
 		 new Thread(fr).start();
-		 
+		 new Thread(fr).start();
 
 	}
 

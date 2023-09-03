@@ -1,9 +1,16 @@
 package ff.ch06;
 
+import java.util.Locale;
+
 public class Ch0609{
 
 	public static void main(String[] args) throws Throwable {
 		// TODO Auto-generated method stub
+		
+		Locale local = Locale.getDefault();
+		System.out.println(local.getISO3Country());
+		
+		
 		String str="hello";
 		for(int i=0;i<5;i++) {
 			 new Ch0609();

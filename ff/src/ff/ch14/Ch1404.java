@@ -56,7 +56,7 @@ public class Ch1404 {
 		// TODO Auto-generated method stub
 		Account account;
 		account = new Account(100);
-		JoinThread jt1=new JoinThread("新线程1",account);
+		JoinThread jt1=new JoinThread("新线程11",account);
 		jt1.start();
 		//Thread.sleep(100);
 		JoinThread jt2=new JoinThread("新线程2",account);

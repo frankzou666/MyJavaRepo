@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>tws</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+	  <param-name>appname</param-name>
+	  <param-value>atgigu</param-value>
+  </context-param>
+  
+   <!-- ch101 -->
+   <servlet>
+	   <servlet-name>Ch101</servlet-name>
+	   <servlet-class>com.atggweb.ch01.Ch101</servlet-class>
+	   <init-param>
+		   <param-name>username</param-name>
+		   <param-value>frank</param-value>
+	   </init-param>
+	   <load-on-startup>1</load-on-startup>
+	   
+   </servlet>
+   
+   
+   <servlet-mapping>
+	   <servlet-name>Ch101</servlet-name>
+	   <url-pattern>/ch101</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+	   <servlet-name>h1</servlet-name>
+	   <jsp-file>/h1.jsp</jsp-file>
+	   <init-param>
+		   <param-name>pageSum</param-name>
+		   <param-value>0</param-value>
+	   </init-param>
+	   
+   </servlet>
+   
+   <servlet-mapping>
+	   <servlet-name>h1</servlet-name>
+	   <url-pattern>/h1.jsp</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
