@@ -24,10 +24,37 @@ layout:decorate="~{layout/layout}">
   </div>
 
 
+
+ <div>
+   <table class="table table-striped table-bordered table-hover">
+     <tr>
+       <th>User ID</th>
+       <th>User Name</th>
+       <th>Birthday</th>
+       <th>Age</th>
+       <th>Gender</th>
+       <th></th>
+     </tr>
+     
+     <tr th:each="item:${musers}">
+        <td th:text="${item.userId}"></td>
+        <td th:text="${item.userName}"></td>
+        <td th:text="${item.birthday}"></td>
+        <td th:text="${item.age}"></td>
+        <td th:text="${item.gender}==1?'Male':'Female'"></td>
+        <td><a th:href="@{'/user/detail/'+${item.userId}}" class="btn btn-primary">Detail</a></td>
+     
+     </tr>
+   
+   
+   
+   </table>
+ 
+ 
+ 
+ </div>
+
 </div>
-
-
-
 
 </body>
 </html>

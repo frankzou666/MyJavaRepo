@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import java.util.Locale;
 import java.util.Map;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +15,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.demo.application.service.UserApplicationService;
+import com.example.demo.application.service.UserService;
+import com.example.demo.domain.MUser;
 import com.example.demo.form.SignupForm;
 
 import lombok.extern.slf4j.Slf4j;
@@ -27,6 +30,12 @@ public class SignupController {
 	
 	@Autowired
 	private UserApplicationService userApplicationService;
+	
+	@Autowired
+	private UserService userService;
+	
+	@Autowired
+	private ModelMapper modelMapper;
 	
 	@GetMapping("/signup")
 	
@@ -53,6 +62,12 @@ public class SignupController {
 		}	
 		
 		log.info(form.toString());
+		
+		// ModelMapper map form to other class
+		MUser muser = modelMapper.map(form, MUser.class);
+		
+		//add user to db
+		userService.singup(muser);
 
 		return "redirect:/login";
 		

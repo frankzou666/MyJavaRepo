@@ -64,7 +64,9 @@ public class Ch101 implements Servlet {
 		
 		System.out.println(req.getParameter("hello"));
 		RequestDispatcher requestDispatcher = req.getRequestDispatcher("/");
+		
 		requestDispatcher.forward(req, res);
+		
 	
 
 	}
