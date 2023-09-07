@@ -14,9 +14,30 @@
 		<result column="gender" property="gender" />
 		<result column="department_id" property="departmentId" />
 		<result column="role" property="role" />
+        <!-- if one to one use association-->
+		<association property="department" resultMap="department" />
+		
+		<!-- if one to many ,use colleciton-->
+		<collection property="salaryList" resultMap="salary" columnPrefix="salary_"/>
 		
 		
 	</resultMap>
+	
+	<resultMap id="department" type="com.example.demo.domain.Department">
+		<id column="department_id" property="departmentId" />
+		<result column="department_name" property="departmentName" />
+	
+		
+	</resultMap>
+	
+	<resultMap id="salary" type="com.example.demo.domain.Salary">
+		<id column="user_id" property="userId" />
+		<id column="year_month1" property="yearMonth1" />
+		<result column="salary" property="salary" />
+	
+		
+	</resultMap>
+	
 	<insert id="InsertOne" useGeneratedKeys="true" keyProperty="id">
 		
 		 insert into m_user(
@@ -35,16 +56,26 @@
             user_id , password , user_name , birthday , 
             age , gender , department_id, role 
          from m_user
+         <!-- if column have ,you should test it-->
+         <where>
+			 <if test="userId!=null"> user_id like '%${userId}%'</if>
+			 <if test="userName!=null">  and user_name like '%${userName}%'</if>
+			 
+		 </where>
            
 	</select>
 	
 	<select  id="findOne" resultMap="user">
 		
 		 select  
-            user_id , password , user_name , birthday , 
-            age , gender , department_id, role 
-         from m_user
-         where user_id = #{userId}
+            a.user_id , password , user_name , birthday , 
+            age , gender , a.department_id, role ,b.department_name,
+            c.user_id as salary_user_id,
+            c.year_month1 as salary_year_month1,
+            c.salary as salary_salary
+            from m_user a left join  m_department b on a.department_id = b.department_id
+               left join t_salary c on a.user_id = c.user_id
+         where a.user_id = #{userId}
            
 	</select>
 	

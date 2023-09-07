@@ -12,7 +12,7 @@ public interface UserMapper {
 	public Integer InsertOne(MUser muser);
 	
 	//get all user
-	public List<MUser> getAllMuser();
+	public List<MUser> getAllMuser(MUser muser);
 	
 	//get a user by userId
 	public MUser findOne(String userId);

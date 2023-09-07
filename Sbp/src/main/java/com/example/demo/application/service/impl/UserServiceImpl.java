@@ -30,9 +30,9 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public List<MUser> getAllUsers() {
+	public List<MUser> getAllUsers(MUser muser) {
 		// TODO Auto-generated method stub
-		return userMapper.getAllMuser();
+		return userMapper.getAllMuser(muser);
 	}
 
 	// get one user
@@ -43,19 +43,21 @@ public class UserServiceImpl implements UserService {
 		return userMapper.findOne(userId);
 	}
 
+	
 	@Override
 	@Transactional
 	public void deleteUserByuserId(String userId) {
 		// TODO Auto-generated method stub
 		int count = userMapper.DeleteOne(userId);
-		int i = 1/0;
 
 	}
 
+	@Transactional   
 	@Override
 	public void updateUserOne(String userId, String userName, String password) {
 		// TODO Auto-generated method stub
 		userMapper.updateOne(userId, userName, password);
+		int i=1/0;
 
 	}
 

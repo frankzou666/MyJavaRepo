@@ -9,7 +9,7 @@ public interface UserService {
 
 	public void singup(MUser muser);
 
-	public List<MUser> getAllUsers();
+	public List<MUser> getAllUsers(MUser muser);
 
 	public MUser getUserByuserId(String userId);
 	
