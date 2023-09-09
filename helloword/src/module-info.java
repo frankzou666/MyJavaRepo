@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author wanghongyu
+ *
+ */
+module helloword {
+}

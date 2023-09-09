@@ -1,0 +1,22 @@
+package fj.ch06;
+
+class Person{
+	private String name;
+	public Person(String name) {
+		this.name=name;
+	}
+}
+
+
+public class Ch0602 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Person person=new Person("frank");
+		
+		// 这个类的祖先是  java.lang.object,直接输出，就是调用object.toString()方法
+		System.out.println(person);
+
+	}
+	
+
+}
