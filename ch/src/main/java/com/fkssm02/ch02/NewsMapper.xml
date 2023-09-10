@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace= "com.fkssm02.ch02.NewsMapper">
+	
+	<insert id="saveNews">
+        insert into news_inf(title, content) values ( #{title}, #{content}) 
+    </insert>
+    
+    <update id="updateNews">
+        update news_inf
+          set title = #{title}, content = #{content}
+        
+        where id = #{id}
+    </update>
+    
+    <!-- if resulType ,you should define the class name,if resultMap, you should define resultMap-->
+    <select id="selectAll" resultType="com.fkssm02.ch02.News">
+        select id ,title,content
+        from news_inf
+       
+    </select>
+    
+
+
+    
+</mapper>

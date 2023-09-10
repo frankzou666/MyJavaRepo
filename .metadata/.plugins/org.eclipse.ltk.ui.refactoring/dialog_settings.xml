@@ -5,8 +5,17 @@
 		<item key="height" value="400"/>
 	</section>
 	<section name="RefactoringStatusDialog">
-		<item key="DIALOG_WIDTH" value="816"/>
-		<item key="DIALOG_HEIGHT" value="495"/>
-		<item key="DIALOG_FONT_NAME" value="1|微软雅黑|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|微软雅黑"/>
+		<item key="DIALOG_WIDTH" value="800"/>
+		<item key="DIALOG_HEIGHT" value="477"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item key="moveWizard.updateQualifiedNames" value="false"/>
+		<item key="patterns" value="*"/>
+		<item key="deleteSubPackages" value="true"/>
+	</section>
+	<section name="RefactoringWizard.Externalize strings in &apos;Ch0301.java&apos;">
+		<item key="width" value="614"/>
+		<item key="height" value="483"/>
 	</section>
 </section>

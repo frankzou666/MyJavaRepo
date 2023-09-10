@@ -1,0 +1,36 @@
+
+
+body{
+	margin:0;
+	padding: 0%;
+	background-color: lightgrey;
+}
+
+
+
+#contrainer{
+	margin: 5% auto;
+	border-radius: 5%;
+	width: 400px;
+	background-color: whitesmoke;
+	
+}
+
+h2{
+	padding-top: 5%;
+	text-align: center;
+}
+
+
+#contrainerForm{
+	padding-top: 5%;
+	padding-bottom: 5%;
+	padding-left: 5%;
+}
+
+#returnBtn{
+	width:70%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left: 13%;
+}
