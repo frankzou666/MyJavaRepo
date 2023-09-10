@@ -29,13 +29,15 @@ public class Ch202 {
 	
 	public static void insertTest(SqlSession sqlSession) {
 		//interface of news mapper should be with NewsMapper.xml
-		NewsMapper newsMapper = sqlSession.getMapper(NewsMapper.class);
-		News news = new News();
-		news.setContent("crecate from mapper2");
-		news.setTitle("mapper2");
-		newsMapper.saveNews(news);
-		sqlSession.commit();
-		sqlSession.close();
+		
+		
+		    NewsMapper newsMapper = sqlSession.getMapper(NewsMapper.class);
+		  News news  = new News(); 
+		  news.setContent("crecate from mapper2"); 
+		  news.setTitle("mapper2");
+		  newsMapper.saveNews(news); sqlSession.commit(); 
+		  sqlSession.close();
+		 		 
 	}
 	
 	public static void selectTest(SqlSession sqlSession) {

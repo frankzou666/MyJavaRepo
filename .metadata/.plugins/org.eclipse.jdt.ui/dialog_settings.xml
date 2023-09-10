@@ -5,6 +5,8 @@
 	<item key="SortMembers.sort_all" value="false"/>
 	<item key="filters_last_used" value="filter_imports;"/>
 	<section name="completion_proposal_size">
+		<item key="size.x" value="541"/>
+		<item key="size.y" value="348"/>
 	</section>
 	<section name="quick_assist_proposal_size">
 	</section>
@@ -159,5 +161,15 @@
 			<list key="workingSets">
 			</list>
 		</section>
+	</section>
+	<section name="OverrideMethodDialog">
+		<item key="showtypes" value="true"/>
+	</section>
+	<section name="DialogBounds_OverrideMethodDialog">
+		<item key="DIALOG_X_ORIGIN" value="499"/>
+		<item key="DIALOG_Y_ORIGIN" value="138"/>
+		<item key="DIALOG_WIDTH" value="515"/>
+		<item key="DIALOG_HEIGHT" value="456"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
 	</section>
 </section>

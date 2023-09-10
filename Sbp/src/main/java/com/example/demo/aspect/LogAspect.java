@@ -22,7 +22,7 @@ public class LogAspect {
 	
 	
 	//before logincontroller, we log
-	@Before("execution(* *..*LoginController.getLogin(..))")
+	@Before("execution(* *..*SignupController.getSignup(..))")
 	public void startLog(JoinPoint jp) {
 		log.info("start loginController..."+jp.getSignature());
 		

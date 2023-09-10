@@ -22,6 +22,9 @@ public interface UserMapper {
 	
 	//update username and password  by userId
 	public void updateOne(String userId,String userName,String password);
+	
+	//get on user
+	public MUser getOneMuser(String userId);
 
 }
 

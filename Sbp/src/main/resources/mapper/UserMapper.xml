@@ -94,6 +94,17 @@
          where user_id = #{userId}
            
 	</update>
+	
+	<!-- for login-->
+	<select  id="getOneMuser" resultType="MUser">
+		
+		select  
+            user_id , password , user_name , birthday , 
+            age , gender , department_id, role 
+         from m_user
+         where user_id = #{userId}
+           
+	</select>
 
 
 </mapper>

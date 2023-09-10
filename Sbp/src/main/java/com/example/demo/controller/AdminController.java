@@ -8,20 +8,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class LoginController {
+public class AdminController {
 
-	// get the login page
-	@GetMapping("/login")
-	public String getLogin() {
-		int i=10;
-		return "login/login";
+	// get the admin page
+	@GetMapping("/admin")
+	public String getAdmin() {
+		return "admin/admin";
 	}
 	
-	//why do we redirect user/list in post method
-	@PostMapping("/login")
-	public String postLogin() {
-		return "redirect:user/list";
-	}
+
 	
 	
 

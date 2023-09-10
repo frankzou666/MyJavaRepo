@@ -3,6 +3,7 @@ package com.example.demo.application.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,11 +19,18 @@ public class UserServiceImpl implements UserService {
 
 	@Autowired
 	private UserMapper userMapper;
+	
+	@Autowired
+	private PasswordEncoder encoder;
 
 	@Override
 	public void singup(MUser muser) {
 		muser.setDepartmentId(1);
 		muser.setRole("ROLE_GENERAL");
+		
+		//encrypt password 
+		String rawPassword = muser.getPassword();
+		muser.setPassword(encoder.encode(rawPassword));
 		log.info("add user..." + muser);
 
 		userMapper.InsertOne(muser);
@@ -56,9 +64,21 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void updateUserOne(String userId, String userName, String password) {
 		// TODO Auto-generated method stub
-		userMapper.updateOne(userId, userName, password);
-		int i=1/0;
+		userMapper.updateOne(userId, userName, encoder.encode(password));
 
+	}
+
+	@Override
+	public MUser getLoginByuserId(String userId) {
+		// TODO Auto-generated method stub
+		
+		MUser user = userMapper.getOneMuser(userId);
+		/*
+		 * if (userId.equals("aa@162.com")) { throw new
+		 * RuntimeException("you are been locked!"); }
+		 */
+		return user;
+		
 	}
 
 }

@@ -28,6 +28,13 @@
 	<div class="text-center"> 	
 		 <form method="post" th:action="@{/login}" class="form-login">
 		 <h2>Login</h2>
+		 
+		 <!-- if spring_scuriry_last_exeception is not null -->
+		 <p th:if="${session['SPRING_SECURITY_LAST_EXCEPTION']} != null" 
+		    th:text="${session['SPRING_SECURITY_LAST_EXCEPTION'].message}" class="text-danger" >
+		     
+			 
+		 </p>
 		 <!-- splite by form-group -->
 		 <div class="form-group">
 		   <label for="userId" class="sr-only">UserId</label>

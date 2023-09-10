@@ -17,5 +17,8 @@ public interface UserService {
 	
 	//update username and password  by userId
 	public void updateUserOne(String userId,String userName,String password);
+	
+	
+	public MUser getLoginByuserId(String userId);
 
 }

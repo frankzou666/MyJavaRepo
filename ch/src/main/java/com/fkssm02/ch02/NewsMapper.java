@@ -6,7 +6,7 @@ public interface NewsMapper {
 	
 	public void saveNews(News news);
 	
-	public void updateNews(int id);
+	public void updateNews(Integer id);
 	
 	public List<News> selectAll();
 
