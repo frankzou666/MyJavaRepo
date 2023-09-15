@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -16,14 +17,18 @@ public class Ch202 {
 	public static void main(String[] args) throws IOException {
 		String FILE = "mybatis-config.xml";
 		InputStream resources = Resources.getResourceAsStream(FILE);
-		
+	//	Properties proerty = new  Properties();
+	//	proerty.setProperty("password", "rootroot");
 		SqlSessionFactory sqlsessionFactory =  new SqlSessionFactoryBuilder().build(resources);
-		
+		sqlsessionFactory.getConfiguration();
 		SqlSession sqlSession = sqlsessionFactory.openSession();
+		
+		selectTest(sqlSession);
 		
 		//insertTest(sqlSession);
 		
-		selectTest(sqlSession);
+	
+		
 		
 	}
 	
@@ -48,6 +53,8 @@ public class Ch202 {
 		
 		//use mapper to operation
         List<News> listNews = new ArrayList<>();
+ 
+        listNews = newsMapper.selectAll();
         listNews = newsMapper.selectAll();
         
         for(News news:listNews) {

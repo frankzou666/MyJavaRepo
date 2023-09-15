@@ -2,23 +2,41 @@
 
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+  
+
+  <settings>
+   <setting name="cacheEnabled" value="true"/>
+  </settings>
+
 		
    <environments default = "development">
       <environment id = "development">
+		  
          <transactionManager type = "JDBC"/> 
-			
+		 
+		 <!--内置的就是大写，如果用第三方，就要写全类名-->	
          <dataSource type = "POOLED">
             <property name = "driver" value = "com.mysql.cj.jdbc.Driver"/>
             <property name = "url" value = "jdbc:mysql://192.168.1.146:11337/fkssm?serverTimezone=UTC"/>
             <property name = "username" value = "app"/>
             <property name = "password" value = "rootroot"/>
          </dataSource>   
-         
+ 
       </environment>
+      
+      
+     
+      
+      
    </environments>
-	
+   
+    
+
    <mappers>
       <mapper resource = "com/fkssm02/ch02/NewsMapper.xml"/>
+
    </mappers>
-   
+
+
+    
 </configuration>

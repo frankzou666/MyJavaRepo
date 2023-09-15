@@ -89,8 +89,8 @@
 	<update   id="updateOne" >
 
          update m_user
-           set user_name=${userName},
-               password = ${password}
+           set user_name=#{userName},
+               password = #{enctyptPassword}
          where user_id = #{userId}
            
 	</update>

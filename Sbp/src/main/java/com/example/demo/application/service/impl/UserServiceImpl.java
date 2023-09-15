@@ -64,7 +64,8 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void updateUserOne(String userId, String userName, String password) {
 		// TODO Auto-generated method stub
-		userMapper.updateOne(userId, userName, encoder.encode(password));
+		String enctyptPassword = encoder.encode(password);
+		userMapper.updateOne(userId, userName, enctyptPassword);
 
 	}
 

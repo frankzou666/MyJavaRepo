@@ -21,7 +21,7 @@ public interface UserMapper {
 	public Integer DeleteOne(String userId);
 	
 	//update username and password  by userId
-	public void updateOne(String userId,String userName,String password);
+	public void updateOne(String userId,String userName,String enctyptPassword);
 	
 	//get on user
 	public MUser getOneMuser(String userId);

@@ -22,6 +22,8 @@
 
 <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>
 
+<script th:src="@{/js/user/signup.js}" defer></script>
+
 <title th:text="#{user.signup.title}"></title>
 </head>
 <body class="bg-light">
@@ -81,7 +83,9 @@
 		 
 		 
 		 <input type="submit" th:value="#{user.signup.btn}" class="btn btn-primary w-100 mt-3">
+		
 		 </form>	
+		  <button id=signupbyRest name="signupbyRest"  class="btn btn-primary w-100 mt-3">submitbyRest</button>
 	</div>
 	
 </body>

@@ -13,7 +13,6 @@ public class LoginController {
 	// get the login page
 	@GetMapping("/login")
 	public String getLogin() {
-		int i=10;
 		return "login/login";
 	}
 	
