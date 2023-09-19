@@ -5,12 +5,15 @@ public class News {
 	private Integer id;
 	private String title;
 	private String content;
-	public Integer getId() {
-		return id;
-	}
+	
 	public void setId(Integer id) {
 		this.id = id;
 	}
+	
+	public Integer getId() {
+		return id;
+	}
+	
 	public String getTitle() {
 		return title;
 	}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="context1">
+    <jdbcConnection connectionURL="jdbc:mysql://192.168.1.146:11337/fkssm?serverTimezone=UTC" 
+     driverClass="com.mysql.cj.jdbc.Driver" password="rootroot" userId="app" />
+     
+    <javaModelGenerator targetPackage="com.fkssm02.ch02" targetProject="ch" />
+    
+    <javaClientGenerator targetPackage="com.fkssm02.ch02" targetProject="ch" type="XMLMAPPER" />
+    
+    <table catalog="app" tableName="%">
+      
+    </table>
+  </context>
+</generatorConfiguration>

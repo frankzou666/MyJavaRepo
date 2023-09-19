@@ -26,7 +26,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class SignupController {
-	
+
 	
 	@Autowired
 	private UserApplicationService userApplicationService;
@@ -45,6 +45,7 @@ public class SignupController {
 		//log.info("you access the controller :" + this.getClass().getName());
 		Map<String,Integer> genderMap = userApplicationService.getGenderMap(locale);
 		model.addAttribute("genderMap",genderMap);
+	
 		return "user/signup";
 		
 	}

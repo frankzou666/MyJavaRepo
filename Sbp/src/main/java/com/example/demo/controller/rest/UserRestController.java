@@ -11,6 +11,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -59,7 +60,7 @@ public class UserRestController {
         if (bindingResult.hasErrors()) {
         	 Map<String,String> errors = new HashMap<>();
         	 for(FieldError error:bindingResult.getFieldErrors()) {
-        		 errors.put(error.getField(), error.getField());
+        		 errors.put(error.getField(), error.getDefaultMessage());
         	 }
         	 return new RestResult(90,errors);
         }

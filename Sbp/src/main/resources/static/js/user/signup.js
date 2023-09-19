@@ -27,8 +27,11 @@
 		 datetype:"json",
 		 cache:false
 	 }).done(function(data){
-		 if (data.result==90){
+		 if (data.result===90){
 			 alert("signup user valid error")
+		 }else if(data.result===0){
+			  alert("signup user done");
+			  window.location.href="/login";
 		 }
 		 //alert("signup user done!");
 		// window.location.href="/login";
