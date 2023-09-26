@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-18">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/Users/oliver/Documents/frank/dev/java/MyJavaRepo/spia/lib/spring-context-5.3.30.jar"/>
+	<classpathentry kind="lib" path="/Users/oliver/Documents/frank/dev/java/MyJavaRepo/spia/lib/spring-aop-5.3.30.jar"/>
+	<classpathentry kind="lib" path="/Users/oliver/Documents/frank/dev/java/MyJavaRepo/spia/lib/spring-beans-5.3.30.jar"/>
+	<classpathentry kind="lib" path="/Users/oliver/Documents/frank/dev/java/MyJavaRepo/spia/lib/spring-core-5.3.30.jar"/>
+	<classpathentry kind="lib" path="/Users/oliver/Documents/frank/dev/java/MyJavaRepo/spia/lib/spring-expression-5.3.30.jar"/>
+	<classpathentry kind="lib" path="/Users/oliver/Documents/frank/dev/java/MyJavaRepo/spia/lib/spring-jcl-5.3.30.jar"/>
+	<classpathentry kind="lib" path="/Users/oliver/Documents/frank/dev/java/MyJavaRepo/spia/lib/spring-tx-5.3.30.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -10,11 +10,7 @@
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
   
-  <context-param>
-	  <param-name>appname</param-name>
-	  <param-value>atgigu</param-value>
-  </context-param>
-  
+ 
    <!-- ch101 -->
    <servlet>
 	   <servlet-name>Ch101</servlet-name>

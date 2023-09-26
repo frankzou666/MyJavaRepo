@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper   namespace= "com.fkssm02.ch03.NewsMapper">
+	
+	<resultMap id="newsa" type="com.fkssm02.ch03.NewA">
+	    <!-- 使用constructor映射时，注意参数的顺序和类型-->
+		<constructor>
+			<arg column="content"  javaType="String" />
+		</constructor>
+		<result column="title" property="title_a"  />
+		
+	</resultMap>
+	
+  
+	<insert id="saveNews" useGeneratedKeys="true"  keyProperty="id" >
+        insert into news_inf(title, content) values ( #{title}, #{content}) 
+    </insert>
+    
+    <update id="updateNews">
+        update news_inf
+          set title = #{title}, content = #{content}
+        
+        where id = #{id}
+    </update>
+    
+    
+    <select  flushCache="true"  id="selectAll" resultMap="newsa">
+        select title,content
+        from news_inf
+       
+    </select>
+    
+    <select   id="selectById" resultType="com.fkssm02.ch03.News" >
+        select id ,title,content
+        from news_inf
+        where id = #{strId}
+       
+    </select>
+    
+     <!-- 调用存储过程，statementType和call-->
+     <select   id="selectByIdByCallable" resultType="com.fkssm02.ch03.News" statementType="CALLABLE">
+		 
+        {call p_cnt_news(${strId})}
+       
+    </select>
+    
+     <!-- table name as parameter ,${}-->
+     <select   id="selectBytable" resultType="com.fkssm02.ch03.News">
+        select id ,title,content
+        from ${tableName}
+        where id = #{strId}
+       
+    </select>
+    
+
+    
+</mapper>

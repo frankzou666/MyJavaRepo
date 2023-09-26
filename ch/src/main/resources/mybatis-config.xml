@@ -28,7 +28,9 @@
     
 
    <mappers>
-      <mapper resource = "com/fkssm02/ch02/NewsMapper.xml"/>
+      <mapper resource = "com/fkssm02/ch03/NewsMapper.xml"/>
+      <mapper resource = "com/fkssm02/ch04/PersonMapper.xml"/>
+
 
    </mappers>
 

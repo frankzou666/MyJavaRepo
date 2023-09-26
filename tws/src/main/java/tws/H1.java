@@ -30,7 +30,7 @@ public class H1 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Logger.getLogger(getServletName()).info("good idea");
-		response.getWriter().write("hello5");
+		response.getWriter().write("hello6");
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 

@@ -9,4 +9,18 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+	  <servlet-name>ch03</servlet-name>
+	  <servlet-class>tws.ch03.DispatcherServlet</servlet-class>
+	  <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+      <jsp-config> 
+	    <taglib>
+          <taglib-uri> /mytaglib</taglib-uri>
+          <taglib-location> /WEB-INF/mytaglib.tld</taglib-location> 
+         </taglib>
+      </jsp-config>
+
 </web-app>

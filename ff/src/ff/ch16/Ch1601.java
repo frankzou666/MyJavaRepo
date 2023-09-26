@@ -1,6 +1,6 @@
 package ff.ch16;
 
-
+import java.util.UUID;
 
 class FirstThread extends Thread {
 	
@@ -49,6 +49,9 @@ public class Ch1601{
 		 new Thread(fr).start();
 		 new Thread(fr).start();
 		 new Thread(fr).start();
+		 System.out.println(UUID.randomUUID());
+		 
+
 
 	}
 
