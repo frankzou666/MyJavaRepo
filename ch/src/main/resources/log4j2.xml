@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Configuration status="WARN">
    <Appenders>
-    <Console name="Console" target="SYSTEM OUT"> 
+     <Console name="Console" target="SYSTEM OUT"> 
 		 <PatternLayout pattern="%5p [%t] %logger {36} %m%n" />
      </Console> 
     </Appenders>
-<Loggers>
- <Root level="debug">
-  <AppenderRef ref="Console"/>
-</Root>
-    <Logger name="com.fkssm02" level="debug"/>
-</Loggers>
+   <Loggers>
+    <Root level="debug">
+       <AppenderRef ref="Console"/>
+    </Root>
+       <Logger name="com.fkssm02" level="debug"/>
+   </Loggers>
  </Configuration>

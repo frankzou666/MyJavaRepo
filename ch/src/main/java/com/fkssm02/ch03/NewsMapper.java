@@ -14,7 +14,9 @@ public interface NewsMapper {
 	
 	public List<NewA> selectAll();
 	
-	public News selectById(@Param("strId")String strId);
+	public List<News>  selectById(@Param("strId")String strId);
+	
+	public List<News>  selectByIds(@Param("strIds")String[] strIds);
 	
 	public List<News> selectByIdByCallable(@Param("strId")String strId);
 	

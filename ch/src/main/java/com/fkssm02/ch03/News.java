@@ -1,6 +1,8 @@
 package com.fkssm02.ch03;
 
-public class News {
+import java.io.Serializable;
+
+public class News implements Serializable{
 	
 	private Integer id;
 	private String title;

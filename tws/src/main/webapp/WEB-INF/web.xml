@@ -22,5 +22,22 @@
           <taglib-location> /WEB-INF/mytaglib.tld</taglib-location> 
          </taglib>
       </jsp-config>
+      
+  <servlet>
+	  <servlet-name>ch0401</servlet-name>
+	  <servlet-class>tws.ch04.Ch0401</servlet-class>
+	  <init-param>
+		  <param-name>username</param-name>
+		  <param-value>good</param-value>
+	  </init-param>
+	  
+  </servlet>
+   <servlet-mapping>
+	  <servlet-name>ch0401</servlet-name>
+	  <url-pattern>/ch0401</url-pattern>
+	  
+  </servlet-mapping>
+  
+      
 
 </web-app>

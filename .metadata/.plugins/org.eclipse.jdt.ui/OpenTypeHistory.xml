@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy/>
+<typeInfoHistroy>
+    <typeInfo handle="=tws/\/Users\/oliver\/soft\/tomcat9\/apache-tomcat-9.0.71\/lib\/jsp-api.jar=/javadoc_location=/https:\/\/javaee.github.io\/javaee-spec\/javadocs\/=/=/owner.project.facets=/jst.web=/&lt;javax.servlet.jsp.tagext(TagSupport.class[TagSupport" modifiers="33" timestamp="1692289356000"/>
+    <typeInfo handle="=ch/\/Users\/oliver\/.m2\/repository\/org\/mybatis\/mybatis\/3.5.2\/mybatis-3.5.2.jar=/maven.pomderived=/true=/=/maven.groupId=/org.mybatis=/=/maven.artifactId=/mybatis=/=/maven.version=/3.5.2=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.apache.ibatis.plugin(Interceptor.class[Interceptor" modifiers="1537" timestamp="1694268037000"/>
+    <typeInfo handle="=tws/\/Users\/oliver\/soft\/tomcat9\/apache-tomcat-9.0.71\/lib\/servlet-api.jar=/javadoc_location=/https:\/\/javaee.github.io\/javaee-spec\/javadocs\/=/=/owner.project.facets=/jst.web=/&lt;javax.servlet.http(HttpServlet.class[HttpServlet" modifiers="1057" timestamp="1692289356000"/>
+</typeInfoHistroy>

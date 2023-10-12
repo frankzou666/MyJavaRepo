@@ -1,9 +1,9 @@
 package com.fkssm02.ch04;
 
-import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 
 
 public class Ch01 {
@@ -22,7 +22,6 @@ public class Ch01 {
 		
 		sqlSession.commit();
 		sqlSession.close();
-		
 		
 				
 		

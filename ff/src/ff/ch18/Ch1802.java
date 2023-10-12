@@ -32,6 +32,8 @@ public class Ch1802 {
 		//Student  只是一个接口，但是代理了
 		Student student = (Student)Proxy.newProxyInstance(Student.class.getClassLoader(), new Class[] {Student.class}, invocationHandler);
 		student.sayHello("hello student");
+		
+		//studuent只是一接口，在这里输出了null
 		System.out.println(student);
 		
 		

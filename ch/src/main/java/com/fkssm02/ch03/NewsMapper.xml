@@ -14,7 +14,16 @@
 	
   
 	<insert id="saveNews" useGeneratedKeys="true"  keyProperty="id" >
-        insert into news_inf(title, content) values ( #{title}, #{content}) 
+        insert into news_inf(title
+        <!--注意前面的分隔符，mybats是硬拼上去的-->
+        <if test="content!=null">
+             ,content
+        </if>
+        ) values ( #{title}
+        <if test="content!=null">
+            ,#{content}
+        </if>
+        ) 
     </insert>
     
     <update id="updateNews">
@@ -34,7 +43,15 @@
     <select   id="selectById" resultType="com.fkssm02.ch03.News" >
         select id ,title,content
         from news_inf
-        where id = #{strId}
+        <where>
+			<!--where要写上 -->
+            <if test="strId!=null">
+			 id = #{strId}
+		    </if>
+		</where>
+    
+        
+      
        
     </select>
     
@@ -53,6 +70,20 @@
        
     </select>
     
+    <select   id="selectByIds" resultType="com.fkssm02.ch03.News">
+        select id ,title,content
+        from news_inf
+        where id in 
+        <!--从一个数据组来拼接in的字符串-->
+        <foreach  item="id"   collection="strIds" open="(" separator="," close=")" >
+			#{id}
+		</foreach>
+    
+       
+    </select>
+    
+    <!-- 使用二级cache测试-->
+    <cache></cache>
 
     
 </mapper>
