@@ -38,6 +38,20 @@
 	  
   </servlet-mapping>
   
+  
+  <!-- file download-->
+  
+  <servlet>
+	  <servlet-name>ch0501</servlet-name>
+	  <servlet-class>tws.ch05.DownloadFile</servlet-class>
+	  
+  </servlet>
+   <servlet-mapping>
+	  <servlet-name>ch0501</servlet-name>
+	  <url-pattern>/df</url-pattern>
+	  
+  </servlet-mapping>
+  
       
 
 </web-app>

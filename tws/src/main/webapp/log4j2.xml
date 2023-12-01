@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Configuration status="WARN">
+   <Appenders>
+     <Console name="Console" target="SYSTEM OUT"> 
+		 <PatternLayout pattern="%5p [%t] %logger {36} %m%n" />
+     </Console> 
+    </Appenders>
+   <Loggers>
+    <Root level="debug">
+       <AppenderRef ref="Console"/>
+    </Root>
+       <Logger name="tws.ch04" level="debug"/>
+       <Logger name="com.mchange" level="debug"/>
+   </Loggers>
+ </Configuration>

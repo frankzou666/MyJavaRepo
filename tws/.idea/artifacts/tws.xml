@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="tws">
+    <output-path>$PROJECT_DIR$/out/artifacts/tws</output-path>
+    <root id="root">
+      <element id="dir-copy" path="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+      <element id="javaee-facet-resources" facet="tws/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="tws" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="log4j-core-2.19.0.jar" module-name="tws" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
