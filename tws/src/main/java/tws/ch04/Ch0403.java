@@ -14,15 +14,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Appender;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+
 
 
 @WebServlet("/ch0403")
 public class Ch0403 extends HttpServlet {
 	
-
+    private final Logger logger = LogManager.getRootLogger();
+    
 	
-
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
@@ -34,10 +39,12 @@ public class Ch0403 extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		  String exceptionCode;
 		  PrintWriter out = resp.getWriter();
+		  logger.getAppender("Console");
+		  logger.info("#######################");
 		  ComboPooledDataSource dataSource = (ComboPooledDataSource)getServletContext().getAttribute("dataSource");
 		  try {
 			Connection connection = dataSource.getConnection();
-			PreparedStatement ps = connection.prepareStatement("select user_id from m_user;");
+			PreparedStatement ps = connection.prepareStatement("select now();");
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				out.println(rs.getString(1));

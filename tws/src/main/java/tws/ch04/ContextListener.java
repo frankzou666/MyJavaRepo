@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
@@ -12,12 +13,16 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.mysql.cj.log.Slf4JLogger;
 
-@WebListener
+
 
 public class ContextListener implements ServletContextListener {
 
+
+   
 	private ComboPooledDataSource dataSource = null;
+	
 
 	@Override
 	public void contextDestroyed(ServletContextEvent sce) {
@@ -57,7 +62,7 @@ public class ContextListener implements ServletContextListener {
 		}
 		// 放到context
 		sc.setAttribute("counter", counter);
-		System.out.println("18");
+
 		
 		//创建c3p0,并且放到servletContext中
 		try {
